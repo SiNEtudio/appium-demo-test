@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.demo.test'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    compile 'com.google.code.gson:gson:+'
+    compile 'io.appium:java-client:7.1.0'
+    compile group: 'org.hamcrest', name: 'hamcrest-core', version: '2.1'
+    compile group: 'junit', name: 'junit', version: '4.13.2'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
+}
+
+test {
+    useJUnitPlatform()
+}
